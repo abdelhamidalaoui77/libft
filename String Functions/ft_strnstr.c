@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 20:28:50 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/19 21:03:49 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/20 15:34:26 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
@@ -15,7 +15,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	
+
 	i = 0;
 	j = 0;
 	if (!*little)
