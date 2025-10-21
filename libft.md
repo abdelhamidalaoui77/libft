@@ -1,53 +1,53 @@
 🅰️ Character Check & Conversion Functions
 (These test or transform individual characters — inspired by <ctype.h>)
 
-ft_isalpha
+ft_isalpha => Done!
 
-ft_isdigit
+ft_isdigit => Done!
 
-ft_isalnum
+ft_isalnum => Done!
 
-ft_isascii
+ft_isascii => Done!
 
-ft_isprint
+ft_isprint => Done!
 
-ft_toupper
+ft_toupper => Done!
 
-ft_tolower
+ft_tolower => Done!
 
 🧮 Memory Functions
 (From <string.h> — they deal with raw memory blocks)
 
-ft_memset
+ft_memset => Done!
 
-ft_bzero
+ft_bzero => Done!
 
-ft_memcpy
+ft_memcpy => Done!
+ 
+ft_memmove => Done!
 
-ft_memmove
+ft_memchr => Done!
 
-ft_memchr
-
-ft_memcmp
+ft_memcmp => Done!
 
 🔠 String Functions
 (Operate on C strings — null-terminated character arrays)
 
-ft_strlen
+ft_strlen => Done!
 
-ft_strlcpy
+ft_strlcpy => Done!
 
-ft_strlcat
+ft_strlcat => Done!
 
-ft_strchr
+ft_strchr => Done!
 
-ft_strrchr
+ft_strrchr => Done!
 
-ft_strncmp
+ft_strncmp => Done!
 
-ft_strnstr
+ft_strnstr => Done!
 
-ft_atoi
+ft_atoi => Done!
 
 🧩 Additional Functions (Part 2 of Libft)
 (Not part of the standard C library — you build these using your previous functions)

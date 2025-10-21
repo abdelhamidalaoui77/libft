@@ -6,18 +6,17 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 16:23:50 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/19 20:28:17 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/20 18:45:22 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <limits.h>
 
 int	ft_atoi(const char *nptr)
 {
-	unsigned long int	result;
-	int					sign;
-	int					i;
+	int	result;
+	int	sign;
+	int	i;
 
-	if (!nptr)
-		return (0);
 	i = 0;
 	sign = 1;
 	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
@@ -34,14 +33,19 @@ int	ft_atoi(const char *nptr)
 		result = result * 10 + (nptr[i] - 48);
 		i++;
 	}
+	if (result * sign > INT_MAX)
+		return (-1);
+	if (result * sign < INT_MIN)
+		return (0);
 	return (result * sign);
 }
 /*
+#include <stdlib.h>
 #include <stdio.h>
 
 int	main()
 {
-	char *str = "  -002147483649";
-	int result = ft_atoi(str);
+	char *str = " -2147483656";
+	int result = atoi(str);
 	printf("%d\n",result);
 } */
