@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 21:57:24 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/21 23:06:08 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:55:09 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,4 @@ int	main()
 	char *strtr = ft_strjoin(str,btr);
 	printf("%s\n",strtr);
 	return 0;
-} */
+}  */
