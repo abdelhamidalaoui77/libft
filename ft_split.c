@@ -6,10 +6,9 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:55:16 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/26 11:17:27 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/26 14:53:03 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 /*
 static	int	count_words(const char *s, char c)
 {
@@ -41,7 +40,7 @@ static	int	count_words(const char *s, char c)
 			total_words += 1;
 		}
 	}
-}
+} */
 static	int	count_words(const char *s, char c)
 {
 	int	i;
@@ -53,7 +52,6 @@ static	int	count_words(const char *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-
 		if (s[i])
 		{
 			total_words++;
@@ -63,11 +61,11 @@ static	int	count_words(const char *s, char c)
 	}
 	return (total_words);
 }
-
+/*
 char	**ft_split(char const *s, char c)
 {
 	
-} */
+} 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -77,4 +75,4 @@ int	main()
 	const char *s = "apple,,,banana,orange";
 	char c = ',';
 	printf("%d\n",count_words(s,c));
-}
+} */
