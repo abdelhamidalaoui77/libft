@@ -52,13 +52,13 @@ ft_atoi => Done!
 🧩 Additional Functions (Part 2 of Libft)
 (Not part of the standard C library — you build these using your previous functions)
 
-ft_substr
+ft_substr => Done
 
-ft_strjoin
+ft_strjoin = Done!
 
-ft_strtrim
+ft_strtrim => Done!
 
-ft_split
+ft_split => Abou to Done!
 
 ft_itoa
 

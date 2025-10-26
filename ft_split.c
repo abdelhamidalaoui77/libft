@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:55:16 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/25 22:42:50 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/26 11:17:27 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static	int	count_words(const char *s, char c)
 	}
 	return (total_words);
 }
-/*
+
 char	**ft_split(char const *s, char c)
 {
 	
