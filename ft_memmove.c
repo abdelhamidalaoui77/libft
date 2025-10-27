@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-/*
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned const char	*s;
@@ -28,7 +28,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		i++;
 	}
 	return (d);
-} */
+} 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned const char	*s;
@@ -54,7 +54,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
+
 
 #include <string.h>
 #include <stdio.h>
@@ -62,9 +62,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 int	main()
 {
-	const char *src = "Hello, ahmed akala tofa7atan";
+	const char *src = "Hello,";
 	char	dst[28];
-	ft_memmove(dst, src, 28);
+	ft_memmove(dst, src, 3);
 	printf("%s\n",dst);
 	printf("%zu\n",sizeof(src));
-} */
+} 
