@@ -10,20 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	lenght;
-
-	lenght = 0;
-	while (s[lenght])
-		lenght++;
-	return (lenght);
-}
+#include "libft.h"
 
 static	int	count_words(const char *s, char c)
 {

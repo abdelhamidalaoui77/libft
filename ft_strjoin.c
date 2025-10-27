@@ -9,22 +9,7 @@
 /*   Updated: 2025/10/22 10:55:09 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <bsd/string.h>
-#include <limits.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 /*
 char	*handle_malloc(char const *s1,char const *s2)

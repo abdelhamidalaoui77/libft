@@ -12,18 +12,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-int	in_set(char c, const char *set)
+static	int	in_set(char c, const char *set)
 {
 	while (*set)
 	{
@@ -34,7 +25,7 @@ int	in_set(char c, const char *set)
 	return (0);
 }
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+static	char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	i;

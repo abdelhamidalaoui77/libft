@@ -9,8 +9,8 @@
 /*   Updated: 2025/10/26 15:34:49 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 #include <fcntl.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

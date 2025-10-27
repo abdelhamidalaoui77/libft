@@ -10,29 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 /*
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
-
 #ifndef SIZE_MAX
 # define SIZE_MAX ((size_t)-1)
 #endif
-
-
-void	ft_bzero(void *s, size_t n)
-{
-	size_t			i;
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		ptr[i] = '\0';
-		i++;
-	}
-}
 */
+#include "libft.h"
+
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;

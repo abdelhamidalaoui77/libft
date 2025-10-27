@@ -12,18 +12,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-int	handle_sub_len(char const *s, unsigned int start, size_t len)
+static	int	handle_sub_len(char const *s, unsigned int start, size_t len)
 {
 	size_t	substrlen;
 	size_t	subsize;

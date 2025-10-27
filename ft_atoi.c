@@ -9,7 +9,7 @@
 /*   Updated: 2025/10/20 18:45:22 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <limits.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -45,7 +45,8 @@ int	ft_atoi(const char *nptr)
 
 int	main()
 {
-	char *str = " -2147483656";
+	char *str = " ---2147483656";
 	int result = atoi(str);
 	printf("%d\n",result);
-} */
+} 
+*/
