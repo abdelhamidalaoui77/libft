@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:44:21 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/20 22:06:24 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/28 19:04:57 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -28,7 +28,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		i++;
 	}
 	return (d);
-} 
+}
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned const char	*s;
@@ -54,7 +55,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 
 #include <string.h>
 #include <stdio.h>
@@ -67,4 +68,4 @@ int	main()
 	ft_memmove(dst, src, 3);
 	printf("%s\n",dst);
 	printf("%zu\n",sizeof(src));
-} 
+} */

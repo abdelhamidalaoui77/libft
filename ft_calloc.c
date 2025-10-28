@@ -9,12 +9,10 @@
 /*   Updated: 2025/10/21 19:18:59 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
+#include "libft.h"
 #ifndef SIZE_MAX
 # define SIZE_MAX ((size_t)-1)
 #endif
-*/
-#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -56,7 +54,6 @@ int main(void)
     }
     free(sys);
     free(mine);
-
     // --- Test 2: Zero arguments ---
     printf("\n=== Test 2: Zero arguments ===\n");
     sys = calloc(0, 10);
@@ -65,7 +62,6 @@ int main(void)
     printf("ft_calloc(0, 10):     %p\n", (void *)mine);
     free(sys);
     free(mine);
-
     // --- Test 3: Overflow protection ---
     printf("\n=== Test 3: Overflow protection ===\n");
     sys = calloc(SIZE_MAX, 2);

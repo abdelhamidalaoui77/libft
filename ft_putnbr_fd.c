@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	c = nb % 10 + 48;
 	write(fd, &c, 1);
 }
-
+/*
 #include <fcntl.h>
 #include <stdio.h>
 
@@ -48,4 +48,4 @@ int	main(void)
 	// ft_putnbr_fd(12345, fd);
 	// close(fd);
 	printf("%d\n%d\n",fd,fd2);
-}
+} */
