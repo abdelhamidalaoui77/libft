@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = libft.a
-CC = cc
+CC = cc -lft
 CFLAGS = -Wall -Wextra -Werror
 SRC = ft_isalpha.c \
       ft_isdigit.c \
@@ -47,12 +47,12 @@ SRC = ft_isalpha.c \
 
 OBJ = $(SRC:.c=.o)
 HEADER = libft.h
-
+ARCHIVE = ar rcs
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	$(ARCHIVE) $(NAME) $(OBJ)
 	@echo "libft.a created successfully!"
 
 %.o: %.c

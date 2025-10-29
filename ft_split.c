@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:55:16 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/26 19:45:32 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:55:58 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static	int	count_words(const char *s, char c)
 
 	i = 0;
 	total_words = 0;
+	if (!s || !*s)
+		return (0);
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -41,7 +43,7 @@ static	char	*malloc_word(const char *s, char c)
 	len = 0;
 	while (s[len] && s[len] != c)
 		len++;
-	word = (char *)malloc((len + 1) + sizeof(char));
+	word = (char *)malloc((len + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	word[len] = '\0';
@@ -61,6 +63,13 @@ static	void	copy_word(char *dest, const char *src, char c)
 	dest[i] = '\0';
 }
 
+static void	free_all(char **res, int j)
+{
+	while (j-- > 0)
+		free(res[j]);
+	free(res);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -70,9 +79,9 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	words = count_words(s, c);
 	if (!s)
 		return (NULL);
-	words = count_words(s, c);
 	res = (char **)malloc(sizeof(char *) * (words + 1));
 	if (!res)
 		return (NULL);
@@ -82,7 +91,10 @@ char	**ft_split(char const *s, char c)
 			s++;
 		res[j] = malloc_word(s, c);
 		if (!res[j])
+		{
+			free_all(res, j);
 			return (NULL);
+		}
 		copy_word(res[j], s, c);
 		s += ft_strlen(res[j]);
 		j++;
@@ -90,7 +102,7 @@ char	**ft_split(char const *s, char c)
 	res[j] = NULL;
 	return (res);
 }
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -106,4 +118,4 @@ int	main()
 		printf("%s\n",r[i]);
 		i++;
 	}
-} */
+} 

@@ -1,4 +1,5 @@
 # 📄 Makefile Tutorial
+words = count_words(s, c);
 
 ## Introduction
 A Makefile is a script used by the `make` utility to automate the build process in software projects. It simplifies managing dependencies and builds targets efficiently, which is particularly useful for C/C++ projects but can be used in many others as well.
