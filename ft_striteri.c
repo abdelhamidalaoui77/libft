@@ -9,9 +9,21 @@
 /*   Updated: 2025/10/31 11:33:59 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-	char	s2;
 
-	s2 = s;
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int,
+char*))
+{
+	int	i;
+
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
+	s[i] = '\0';
 }
