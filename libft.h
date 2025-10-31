@@ -12,6 +12,9 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+#ifndef SIZE_MAX
+# define SIZE_MAX ((size_t) - 1)
+#endif
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>

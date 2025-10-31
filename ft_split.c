@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:55:16 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/31 11:59:07 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/31 21:21:50 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,6 @@ static	void	copy_word(char *dest, const char *src, char c)
 	dest[i] = '\0';
 }
 
-static void	free_all(char **res, int j)
-{
-	while (j-- > 0)
-		free(res[j]);
-	free(res);
-}
-
 static char	**fill_words(char **res, const char *s, char c, int words)
 {
 	int	j;
@@ -81,7 +74,12 @@ static char	**fill_words(char **res, const char *s, char c, int words)
 			s++;
 		res[j] = malloc_words(s, c);
 		if (!res)
-			return (free_all(res, j), NULL);
+		{
+			while (j-- > 0)
+				free(res[j]);
+			free(res);
+			return (NULL);
+		}
 		copy_word(res[j], s, c);
 		s += ft_strlen(res[j]);
 		j++;
