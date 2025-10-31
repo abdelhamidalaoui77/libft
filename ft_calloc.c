@@ -6,13 +6,13 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:42:11 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/21 19:18:59 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/31 12:58:04 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#ifndef SIZE_MAX
-# define SIZE_MAX ((size_t)-1)
-#endif
+/*#ifndef SIZE_MAX
+# define SIZE_MAX ((size_t) - 1)
+#endif */
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

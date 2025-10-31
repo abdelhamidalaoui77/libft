@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:55:16 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/29 15:55:58 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/10/31 11:59:07 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static	int	count_words(const char *s, char c)
 	return (total_words);
 }
 
-static	char	*malloc_word(const char *s, char c)
+static	char	*malloc_words(const char *s, char c)
 {
 	int		len;
 	char	*word;
@@ -70,31 +70,18 @@ static void	free_all(char **res, int j)
 	free(res);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**fill_words(char **res, const char *s, char c, int words)
 {
-	char	**res;
-	int		words;
-	int		i;
-	int		j;
+	int	j;
 
-	i = 0;
 	j = 0;
-	words = count_words(s, c);
-	if (!s)
-		return (NULL);
-	res = (char **)malloc(sizeof(char *) * (words + 1));
-	if (!res)
-		return (NULL);
 	while (j < words)
 	{
 		while (*s == c)
 			s++;
-		res[j] = malloc_word(s, c);
-		if (!res[j])
-		{
-			free_all(res, j);
-			return (NULL);
-		}
+		res[j] = malloc_words(s, c);
+		if (!res)
+			return (free_all(res, j), NULL);
 		copy_word(res[j], s, c);
 		s += ft_strlen(res[j]);
 		j++;
@@ -103,19 +90,18 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	main()
+char	**ft_split(char const *s, char c)
 {
-	const char *s = "apple,, ,banana,orange,,,,";
-	char **r = ft_split(s,',');
-	int i = 0;
-	while (r[i])
-	{
-		//int j = 0;
-		printf("%s\n",r[i]);
-		i++;
-	}
-} 
+	char	**res;
+	int		words;
+
+	if (!s)
+		return (NULL);
+	words = count_words(s, c);
+	res = malloc(sizeof(char *) * (words + 1));
+	if (!res)
+		return (NULL);
+	if (!fill_words(res, s, c, words))
+		return (NULL);
+	return (res);
+}
