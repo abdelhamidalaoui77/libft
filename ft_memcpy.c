@@ -6,21 +6,21 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:18:10 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/20 21:59:36 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/02 23:39:29 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned const char	*s;
-	char				*d;
-	size_t				i;
+	unsigned char	*s;
+	unsigned char	*d;
+	size_t		i;
 
 	if (!dest || !src)
 		return (NULL);
-	s = (unsigned const char *)src;
-	d = (char *)dest;
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
 	i = 0;
 	while (i < n)
 	{
@@ -29,15 +29,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (d);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 int	main()
 {
-	char dest[10] = "hello";
-	printf("%s\n",ft_memcpy(dest, NULL, 0));
-	printf("%s\n",memcpy(dest, NULL, 0));
-} 
+	char dest[] = "hello";
 
+	char *s = ft_memcpy(dest, NULL, 5);
+	char *s3;
+	printf("%s\n",s);
+	char *s2 = memcpy(dest, s3, 5);
+	printf("%s\n",s2);
+}*/
