@@ -31,7 +31,7 @@ $(NAME): $(OBJ)
 	$(ARCHIVE) $(NAME) $(OBJ)
 	@echo "libft.a created successfully!"
 
-%.o: %.c
+%.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

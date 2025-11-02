@@ -6,19 +6,16 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 15:42:16 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/27 17:23:22 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/01 13:29:09 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#ifndef SIZE_MAX
-# define SIZE_MAX ((size_t) - 1)
-#endif
+
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <limits.h>
 
 // Character Check & Conversion Functions

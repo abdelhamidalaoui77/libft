@@ -20,26 +20,33 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		ptr[i] = '\0';
+		ptr[i] = 0;
 		i++;
 	}
 }
-/*
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <bsd/string.h>
 
-int	main()
-{
-	char str[] = "aaaaaaaaabzero";
-	size_t i = 9;
-	//str = malloc(15 + 1);
-	//if (!str)
-	//	return 1;
-	bzero(str,i);
-	printf("%s",str+8);
-	//free(str);
-	return 0;
-} */
+// int	main()
+// {
+// 	// char str[] = "aaaaaaaaabzero";
+// 	// size_t i = 9;
+// 	// char *str = malloc(15 + 1);
+// 	// if (!str)
+// 	// 	return 1;
+// 	// bzero(str,i);
+// 	// printf("%s",str+8);
+// 	// free(str);
+// 	// return 0;
+// 	int i = 1564257;
+// 	bzero((unsigned char *)&i + 1, 3);
+// 	printf("%d\n", i);
+// }
+
+
+
+//257 -> 1 ft_bzero

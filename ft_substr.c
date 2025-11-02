@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	substrlen;
 
-	if (!s || start == 0 || len == 0)
+	if (!s || len == 0)
 		return (malloc(0));
 	substrlen = handle_sub_len(s, start, len);
 	newsubstr = malloc(substrlen + 1);
@@ -50,13 +50,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	newsubstr[i] = '\0';
 	return (newsubstr);
 }
-/*
+
 int	main()
 {
-	char *s = "Hi, this is a substract string, here is the start 
-	of the substract until here this will be ignored";
-	unsigned int start = 31;
-	size_t size = 46;
+	char *s = "hello world";
+	unsigned int start = 1;
+	size_t size = 0;
 	char *ns = ft_substr(s, start, size);
-	printf("the subtract string is :%s\n",ns);
-}*/
+	printf("%s\n",ns);
+	free(ns);
+}

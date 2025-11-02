@@ -39,14 +39,12 @@ int	ft_atoi(const char *nptr)
 		return (0);
 	return (result * sign);
 }
-/*
+
 #include <stdlib.h>
 #include <stdio.h>
 
 int	main()
 {
-	char *str = " ---2147483656";
-	int result = atoi(str);
-	printf("%d\n",result);
+	printf("%d\n", ft_atoi("18446744073709551616"));
+	printf("%d\n",atoi("18446744073709551616"));
 } 
-*/

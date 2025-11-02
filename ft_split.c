@@ -73,7 +73,7 @@ static char	**fill_words(char **res, const char *s, char c, int words)
 		while (*s == c)
 			s++;
 		res[j] = malloc_words(s, c);
-		if (!res)
+		if (!res[j])
 		{
 			while (j-- > 0)
 				free(res[j]);
@@ -103,3 +103,15 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (res);
 }
+
+// int main()
+// {
+// 	char **res =ft_split("    hello   1337  !!", ' ');
+// 	if (!res)
+// 	{
+// 		puts("failed");
+// 		return 0;
+// 	}
+// 	for (int i = 0; res[i]; i++)
+// 		printf("%s\n", res[i]);
+// }

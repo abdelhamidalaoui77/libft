@@ -29,7 +29,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 /*
 #include <string.h>
-#include <stdio.h>
 
 int	main()
 {
@@ -37,4 +36,13 @@ int	main()
 	const char *s2 = "Hi hamid, you're the best!";
 	size_t x = ft_strncmp(s1,s2,5); 
 	printf("%d\n",x);
-} */
+	} */
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+// 	printf("%d\n", ft_strncmp("amine", "aminez", 6));
+// 	printf("%d\n", strncmp("amine", "aminez", 6));
+// }
