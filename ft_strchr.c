@@ -21,20 +21,10 @@ char	*ft_strchr(const char *s, int c)
 	while (s2[i])
 	{
 		if (s2[i] == c)
-			return (&s2[i]);
+			return ((char *)&s2[i]);
 		i++;
 	}
 	if (c == '\0')
-		return (&s2[i]);
-	return (0);
+		return ((char *)&s2[i]);
+	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main()
-{
-	char *str = "hello hamid i konw you have it but i despise you";
-	char *str2 = strchr(str, '\0');
-	printf("%s\n",str2);
-}  */

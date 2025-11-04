@@ -11,6 +11,38 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+static int count_words(const char *s, char c)
+{ 
+	int i; 
+	int total_words; 
+	int check_delimter_before; 
+	int start_new_word; 
+	i = 0; 
+	total_words = 0; 
+	check_delimter_before = 0; 
+	start_new_word = 1; 
+	while (s[i]) 
+	{ 
+		if (s[i] == c)
+		{ 
+			check_delimter_before = 1; 
+			start_new_word = 0; 
+		} 
+		if (check_delimter_before && s[i] != c) 
+		{ 
+			check_delimter_before = 0; 
+			start_new_word = 1; 
+		} 
+		if (start_new_word) 
+		{ 
+			start_new_word = 0; 
+			total_words += 1; 
+		} 
+		i++; 
+		} 
+	return (total_words); 
+} */
 
 static	int	count_words(const char *s, char c)
 {
@@ -19,8 +51,8 @@ static	int	count_words(const char *s, char c)
 
 	i = 0;
 	total_words = 0;
-	if (!s || !*s)
-		return (0);
+	// if (!s || !*s)
+	// 	return (0);
 	while (s[i])
 	{
 		while (s[i] == c)

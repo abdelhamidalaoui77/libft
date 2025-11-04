@@ -27,18 +27,8 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (c == '\0')
-		return (&s2[i]);
+		return ((char *)&s2[i]);
 	if (last_index_occurrence >= 0)
-		return (&s2[last_index_occurrence]);
-	return (0);
+		return ((char *)&s2[last_index_occurrence]);
+	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int	main()
-{
-	const	char *str = "zHello hamid i konw you have it but i despise you";
-	char *str2 = strrchr(str, 'z');
-	printf("%s\n",str2);
-} */
