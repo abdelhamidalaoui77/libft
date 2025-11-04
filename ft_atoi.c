@@ -39,12 +39,12 @@ int	ft_atoi(const char *nptr)
 		return (0);
 	return (result * sign);
 }
-/*
+
 #include <stdlib.h>
 #include <stdio.h>
 
 int	main()
 {
-	printf("%d\n", ft_atoi("18446744073709551616"));
-	printf("%d\n",atoi("18446744073709551616"));
-} */
+	printf("%d\n", ft_atoi("214748364943788599977"));
+	printf("%d\n",atoi("214748364943788599977"));
+} 
