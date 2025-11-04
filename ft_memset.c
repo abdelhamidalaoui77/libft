@@ -29,10 +29,15 @@ void	*ft_memset(void *s, int c, size_t n)
 #include <stdio.h>
 int main()
 {
-	int a;
+	char a[5];
 
-	ft_memset((char *)&a, 57, 1);
-	ft_memset((char *)&a+1, 5, 1);
-	
-	printf("%d\n",a);
+	ft_memset((char *)&a, 0b01101000, 1);
+	ft_memset((char *)&a+1, 0b01100001, 1);
+	ft_memset((char *)&a+2, 0b01101101, 1);
+	ft_memset((char *)&a+3, 0b01101001, 1);
+	ft_memset((char *)&a+4, 0b01100100, 1);
+	ft_memset((char *)&a+5, 0b00000000, 1);
+	// ft_memset((char *)&a+6, 255, 1);
+	// ft_memset((char *)&a+7, 128, 1);
+	printf("%s\n",a);
 }*/

@@ -24,8 +24,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	s2_copy = (unsigned char *)s2;
 	while (i < n)
 	{
-		if (s1_copy[i] != s2_copy[i])
-			return ((s1_copy[i] - s2_copy[i]));
+		if ((unsigned char)s1_copy[i] != (unsigned char)s2_copy[i])
+			return ((unsigned char)s1_copy[i] - (unsigned char)s2_copy[i]);
 		i++;
 	}
 	return (0);
