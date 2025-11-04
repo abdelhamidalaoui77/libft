@@ -6,14 +6,14 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:42:11 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/01 13:30:44 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/03 22:38:21 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#ifndef SIZE_MAX
+/*#ifndef SIZE_MAX
 # define SIZE_MAX ((size_t) - 1)
 #endif 
-
+*/
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
-	if (size != 0 && nmemb > SIZE_MAX / size) // sizemax + 5 
+	if (size != 0 && nmemb > SIZE_MAX / size)
 		return (NULL);
 	total_size = nmemb * size;
 	ptr = malloc(total_size);

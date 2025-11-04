@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 16:23:50 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/20 18:45:22 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/03 22:26:38 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -39,7 +39,7 @@ int	ft_atoi(const char *nptr)
 		return (0);
 	return (result * sign);
 }
-
+/*
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -47,4 +47,4 @@ int	main()
 {
 	printf("%d\n", ft_atoi("18446744073709551616"));
 	printf("%d\n",atoi("18446744073709551616"));
-} 
+} */

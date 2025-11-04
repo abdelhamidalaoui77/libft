@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 19:02:29 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/28 19:02:34 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/03 22:23:07 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,7 @@ char	*ft_itoa(int n)
 	s = ft_char(s, number, len);
 	return (s);
 }
-
-
-
+/*
 #include "stdio.h"
 
 int main()
@@ -78,4 +76,4 @@ int main()
 	printf("%s\n", ft_itoa(2147483648));
 	printf("%s\n", ft_itoa(2147483650));
 	printf("%s\n", ft_itoa(-2147483648));
-}
+} */

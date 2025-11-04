@@ -6,29 +6,10 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:44:21 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/28 19:04:57 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/03 22:22:00 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned const char	*s;
-	char				*d;
-	size_t				i;
-
-	if (!dest && !src)
-		return (NULL);
-	s = (unsigned const char *)src;
-	d = (char *)dest;
-	i = 0;
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (d);
-}
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -45,8 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (n--)
 		{
-			d[i] = s[i];
-			i++;
+			d[n] = s[n];
 		}
 	}
 	else
@@ -55,8 +35,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-
+/*
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -66,4 +45,4 @@ int	main()
 	char src[]="hello 1337";
 	// printf("%s\n", ft_memmove(src+2, src, 4));
 	printf("%s\n", memmove(src+2, src, 4));
-} 
+} */

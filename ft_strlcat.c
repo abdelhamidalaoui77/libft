@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:35:39 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/19 14:20:27 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/03 22:59:57 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,33 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	srclen;
+	size_t	dstlen;
 	size_t	i;
-	size_t	j;
-	size_t	k;
 
+	srclen = ft_strlen(src);
+	if (!dst && size == 0)
+		return (srclen);
+	dstlen = ft_strlen(dst);
+	if (size <= dstlen)
+		return (srclen + size);
 	i = 0;
-	if (size <= ft_strlen(dst))
-		return (ft_strlen(src) + size);
-	while (dst[i])
-		i++;
-	k = i;
-	j = 0;
-	while (src[j] && i < size - 1)
+	while (src[i] && dstlen + i < size - 1)
 	{
-		dst[i] = src[j];
-		j++;
+		dst[dstlen + i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (ft_strlen(src) + k);
+	dst[dstlen + i] = '\0';
+	return (srclen + dstlen);
 }
 /*
+#include <bsd/string.h>
+#include <stdio.h>
 int	main()
 {
-	char dst[6] = "hello";
+	char dst[20] = "hello";
 	const char *src = ", world!!abc";
-	size_t result =strlcat(dst,src,15);
+	size_t result = ft_strlcat(dst,src,20);
 	printf("%zu\n",result);
 	printf("%s\n",dst);
-} */
+}*/

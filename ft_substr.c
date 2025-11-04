@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 10:55:48 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/22 11:49:50 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/03 22:25:53 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -50,7 +50,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	newsubstr[i] = '\0';
 	return (newsubstr);
 }
-
+/*
 int	main()
 {
 	char *s = "hello world";
@@ -59,4 +59,4 @@ int	main()
 	char *ns = ft_substr(s, start, size);
 	printf("%s\n",ns);
 	free(ns);
-}
+}*/
