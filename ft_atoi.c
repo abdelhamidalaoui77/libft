@@ -11,11 +11,32 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+static int	check_overflow(unsigned long result, int sign, char next_digit)
+{
+	if (result > (unsigned long)LONG_MAX / 10)
+	{
+		if (sign == 1)
+			return (-1);
+		else
+			return (0);
+	}
+	if (result == (unsigned long)LONG_MAX / 10
+		&& (next_digit - '0') > (LONG_MAX % 10))
+	{
+		if (sign == 1)
+			return (-1);
+		else
+			return (0);
+	}
+	return (1);
+}
+
 int	ft_atoi(const char *nptr)
 {
-	int	result;
-	int	sign;
-	int	i;
+	unsigned long	result;
+	int				sign;
+	int				i;
+	int				check;
 
 	i = 0;
 	sign = 1;
@@ -28,23 +49,34 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	result = 0;
-	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
+		check = check_overflow(result, sign, nptr[i]);
+		if (check != 1)
+			return (check);
 		result = result * 10 + (nptr[i] - 48);
 		i++;
 	}
-	if (result * sign > INT_MAX)
-		return (-1);
-	if (result * sign < INT_MIN)
-		return (0);
-	return (result * sign);
+	return ((int)(result * sign));
 }
-
+/*
 #include <stdlib.h>
 #include <stdio.h>
 
 int	main()
 {
-	printf("%d\n", ft_atoi("214748364943788599977"));
-	printf("%d\n",atoi("214748364943788599977"));
+	printf("%d\n", ft_atoi("-9223372036854775809"));
+	printf("%d\n",atoi("-9223372036854775809"));
 } 
+#include <stdio.h>
+#include <stdlib.h>
+
+int	main(void)
+{
+	printf("ft_atoi: %d\n", ft_atoi("9223372036854775809"));
+	printf("atoi:    %d\n", atoi("9223372036854775809"));
+	printf("ft_atoi: %d\n", ft_atoi("-9223372036854775809"));
+	printf("atoi:    %d\n", atoi("-9223372036854775809"));
+	printf("ft_atoi: %d\n", ft_atoi("+-42abc"));
+	printf("atoi:    %d\n", atoi("+-42abc"));
+}*/

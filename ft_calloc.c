@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-/*#ifndef SIZE_MAX
+#ifndef SIZE_MAX
 # define SIZE_MAX ((size_t) - 1)
 #endif 
-*/
+
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;

@@ -43,4 +43,12 @@ int	main()
 	size_t result = ft_strlcat(dst,src,20);
 	printf("%zu\n",result);
 	printf("%s\n",dst);
+	char dst[20]= "Hello";
+	char dest[20] = "Hello";
+	const char *src = "world";
+	const char *src2 = "world";
+	printf("the size we are going to create:%zu\n",ft_strlcat(dst,src,8));
+	printf("the new string:%s\n",dst);
+	printf("the size we are going to create:%zu\n",strlcat(dest,src2,8));
+	printf("the new string:%s\n",dest);
 }*/
