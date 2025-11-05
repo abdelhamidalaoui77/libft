@@ -9,7 +9,6 @@
 /*   Updated: 2025/11/03 22:23:07 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 static char	*ft_char(char *s, unsigned int number, long int len)

@@ -18,7 +18,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!*little)
+	if (!big && len == 0)
+		return (NULL);
+	if (!little)
 		return ((char *)big);
 	while (big[i] && i < len)
 	{
@@ -40,6 +42,6 @@ int	main()
 {
 	const char *big =  "hello hamid, i know you have the potential, i really do";
 	const char *ltl = "hamid";
-	const char *result = ft_strnstr(big, "\0", 12);
+	const char *result = strnstr(big, NULL, 6);
 	printf("%s\n",result);
 }*/
