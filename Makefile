@@ -25,7 +25,7 @@ OBJ = $(SRC:.c=.o)
 HEADER = libft.h
 ARCHIVE = ar rcs
 
-all: $(NAME)
+all: $(NAME) 
 
 $(NAME): $(OBJ)
 	$(ARCHIVE) $(NAME) $(OBJ)

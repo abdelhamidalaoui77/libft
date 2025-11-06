@@ -9,21 +9,18 @@
 /*   Updated: 2025/11/03 22:25:53 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+
 #include "libft.h"
 
 static	int	handle_sub_len(char const *s, unsigned int start, size_t len)
 {
-	size_t	substrlen;
+	size_t	slen;
 	size_t	subsize;
-	size_t	retrnsize;
 
-	substrlen = ft_strlen(s);
-	subsize = substrlen - start;
+	slen = ft_strlen(s);
+	subsize = slen - start;
 	if (subsize > len)
-		return (retrnsize = subsize -(subsize - len));
+		return (subsize -(subsize - len));
 	else
 		return (subsize);
 }
@@ -34,8 +31,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	substrlen;
 
-	if (!s || len == 0)
-		return (malloc(0));
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) <= start)
+		return (ft_strdup(""));
 	substrlen = handle_sub_len(s, start, len);
 	newsubstr = malloc(substrlen + 1);
 	if (!newsubstr)
@@ -50,13 +49,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	newsubstr[i] = '\0';
 	return (newsubstr);
 }
-/*
+#include <stdio.h>
 int	main()
 {
 	char *s = "hello world";
 	unsigned int start = 1;
 	size_t size = 0;
-	char *ns = ft_substr(s, start, size);
+	char *ns = ft_substr(NULL, start, 0);
 	printf("%s\n",ns);
+	//printf("%s\n",ft_substr("Bonjour comment ca va?", 5, 8));
 	free(ns);
-}*/
+}
