@@ -45,4 +45,4 @@ fclean: clean
 re: fclean all
 	@echo "Rebuilt everything."
 
-.PHONY: all clean fclean re
+.PHONY: clean fclean 

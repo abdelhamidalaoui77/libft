@@ -17,3 +17,10 @@ int	ft_tolower(int c)
 		return (c);
 	return (c + 32);
 }
+// #include <ctype.h>
+// #include <stdio.h>
+// int	main()
+// {
+// 	printf("%c\n",ft_tolower(90));
+// 	printf("%c\n",90);
+// }

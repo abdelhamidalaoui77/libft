@@ -19,3 +19,9 @@ int	ft_isascii(int c)
 	}
 	return (0);
 }
+// #include <ctype.h>
+// #include <stdio.h>
+// int	main()
+// {
+// 	printf("%d\n",isascii(127));
+// }

@@ -49,14 +49,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	newsubstr[i] = '\0';
 	return (newsubstr);
 }
+/*
 #include <stdio.h>
 int	main()
 {
 	char *s = "hello world";
 	unsigned int start = 1;
 	size_t size = 0;
-	char *ns = ft_substr(NULL, start, 0);
+	char *ns = ft_substr(s, start, 0);
 	printf("%s\n",ns);
 	//printf("%s\n",ft_substr("Bonjour comment ca va?", 5, 8));
 	free(ns);
-}
+}*/

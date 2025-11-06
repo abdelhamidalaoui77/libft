@@ -14,6 +14,12 @@
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
+		return (8);
 	return (0);
 }
+// #include <ctype.h>
+// #include <stdio.h>
+// int	main()
+// {
+// 	printf("%d\n",ft_isalnum(122));
+// }
