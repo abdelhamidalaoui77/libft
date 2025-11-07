@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 18:46:37 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/19 15:51:24 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/07 04:15:33 by abdelhamid       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_isprint(int c)
@@ -17,9 +18,3 @@ int	ft_isprint(int c)
 		return (16384);
 	return (0);
 }
-// #include <ctype.h>
-// #include <stdio.h>
-// int	main()
-// {
-// 	printf("%d\n",ft_isprint(76));
-// }

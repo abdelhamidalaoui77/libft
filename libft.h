@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 15:42:16 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/01 13:29:09 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/07 04:56:44 by abdelhamid       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 //char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-
 
 //File Descriptor Output Functions
 void	ft_putchar_fd(char c, int fd);

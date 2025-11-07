@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 18:10:53 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/16 18:44:16 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/07 04:15:27 by abdelhamid       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,9 +17,3 @@ int	ft_isdigit(int c)
 		return (2048);
 	return (0);
 }
-// #include <ctype.h>
-// #include <stdio.h>
-// int	main()
-// {
-// 	printf("%d\n",isdigit(57));
-// }

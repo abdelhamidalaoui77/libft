@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 20:44:21 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/03 22:22:00 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/07 05:32:21 by abdelhamid       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
@@ -33,14 +34,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-int	main()
-{
-	char src[]="hello 1337";
-	// printf("%s\n", ft_memmove(src+2, src, 4));
-	printf("%s\n", memmove(src+2, src, 4));
-} */
