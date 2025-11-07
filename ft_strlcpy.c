@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 23:11:34 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/03 22:41:28 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/07 05:40:02 by abdelhamid       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 }
 /*
 #include <stdio.h>
-#include <bsd/string.h>
+#include <string.h>
 int	main()
 {
 	char dst[27];
 	const char src[] = "abcdefghijklmnopqrstuvwxyz";
-	size_t len =strlcpy(dst, src, 27);
+	char *s;
+	size_t len =ft_strlcpy(dst, src, 0);
 	printf("%zu\n",sizeof(src));
 	printf("%s\n",dst);
 	printf("%zu",len);
