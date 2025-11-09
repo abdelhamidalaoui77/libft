@@ -40,16 +40,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = end - start;
 	return (ft_substr(s1, start, len));
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char *s1 = "   42 Net work   ";
-	char *set = " ";
-	char *res = ft_strtrim(s1, set);
-
-	printf("Before : \"%s\"\n", s1);
-	printf("After  : \"%s\"\n", res);
-	free(res);
-} */
+/*int main() {
+ char str[] = "Linux hintp";
+ char *res;
+ printf("Before trimming: %s\n", str);
+ res = ft_strtrim(str, "pdL");
+ printf("After trimming: %s\n", res);
+ free(res);
+}*/

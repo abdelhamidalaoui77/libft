@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 20:28:50 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/20 15:34:26 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/09 04:52:33 by abdelhamid       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!big && len == 0)
+	if (len == 0)
 		return (NULL);
 	if (!little)
 		return ((char *)big);
@@ -35,13 +35,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	const char *big =  "hello hamid, i know you have the potential, i really do";
-	const char *ltl = "hamid";
-	const char *result = strnstr(big, NULL, 6);
-	printf("%s\n",result);
-}*/
+// #include <stdio.h>
+// #include <string.h>
+// int main()
+// {
+// 	char dst[15] = "hel";
+// 	char *s = ft_strnstr(NULL,"NULL",0);
+// 	//printf("%s\n",s);
+// }

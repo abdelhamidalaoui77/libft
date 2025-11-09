@@ -6,7 +6,7 @@
 /*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 21:57:24 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/07 06:48:33 by abdelhamid       ###   ########.fr       */
+/*   Updated: 2025/11/09 06:24:45 by abdelhamid       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,35 +16,25 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;
 	size_t	i;
-	size_t	j;
+	size_t	len;
 
-	if (!s1 || !s2)
-		return (malloc(0));
-	newstr = (malloc((ft_strlen(s1) + ft_strlen(s2)) + 1));
+	if (!s1 && !s2)
+		return (ft_strdup(""));
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
+	newstr = (malloc(ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!newstr)
 		return (NULL);
+	len = ft_strlen(s1);
+	ft_memcpy(newstr, s1, len);
 	i = 0;
-	while (s1[i])
+	while (s2[i])
 	{
-		newstr[i] = (char)s1[i];
+		newstr[len + i] = s2[i];
 		i++;
 	}
-	j = 0;
-	while (s2[j])
-	{
-		newstr[i] = (char)s2[j];
-		i++;
-		j++;
-	}
-	newstr[i] = '\0';
+	newstr[len + i] = '\0';
 	return (newstr);
 }
-/*
-int	main()
-{
-	const char *str = "ana a9wad wa7d";
-	const char *btr = " fkora, makaynch li ygad ytnafss m3aya";
-	char *strtr = ft_strjoin(str,btr);
-	printf("%s\n",strtr);
-	return 0;
-}  */

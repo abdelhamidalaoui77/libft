@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:35:39 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/03 22:59:57 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/09 04:49:25 by abdelhamid       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	srclen = ft_strlen(src);
-	if (!dst && size == 0)
+	if (size == 0)
+	{
 		return (srclen);
+	}
 	dstlen = ft_strlen(dst);
 	if (size <= dstlen)
 		return (srclen + size);
@@ -33,22 +35,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dstlen + i] = '\0';
 	return (srclen + dstlen);
 }
-/*
-#include <bsd/string.h>
-#include <stdio.h>
-int	main()
-{
-	char dst[20] = "hello";
-	const char *src = ", world!!abc";
-	size_t result = ft_strlcat(dst,src,20);
-	printf("%zu\n",result);
-	printf("%s\n",dst);
-	char dst[20]= "Hello";
-	char dest[20] = "Hello";
-	const char *src = "world";
-	const char *src2 = "world";
-	printf("the size we are going to create:%zu\n",ft_strlcat(dst,src,8));
-	printf("the new string:%s\n",dst);
-	printf("the size we are going to create:%zu\n",strlcat(dest,src2,8));
-	printf("the new string:%s\n",dest);
-}*/
+// #include <stdio.h>
+// #include <bsd/string.h>
+// int main()
+// {
+// 	char dst[15] = "hel";
+// 	size_t i = ft_strlcat(dst,NULL,5);
+// 	printf("%zu\n",i);
+// }

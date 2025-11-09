@@ -26,19 +26,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	ft_putchar_fd('\n', fd);
 }
-/*
-
-#include <stdio.h>
-int     main()
-{
-        int n = open("file.txt", O_CREAT | O_WRONLY | O_TRUNC, 0755);
-        if (n == -1){
-                perror("open failed");
-                return 1;
-        }
-        printf("%d\n",n);
-        char *str = "Hello world, i am bored the 
-	classico is about to begin!!!\n";
-        ft_putendl_fd(str,n);
-        close(n);
-} */

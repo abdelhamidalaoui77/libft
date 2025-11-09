@@ -3,46 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:55:16 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/31 21:21:50 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/09 07:57:43 by abdelhamid       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-static int count_words(const char *s, char c)
-{ 
-	int i; 
-	int total_words; 
-	int check_delimter_before; 
-	int start_new_word; 
-	i = 0; 
-	total_words = 0; 
-	check_delimter_before = 0; 
-	start_new_word = 1; 
-	while (s[i]) 
-	{ 
-		if (s[i] == c)
-		{ 
-			check_delimter_before = 1; 
-			start_new_word = 0; 
-		} 
-		if (check_delimter_before && s[i] != c) 
-		{ 
-			check_delimter_before = 0; 
-			start_new_word = 1; 
-		} 
-		if (start_new_word) 
-		{ 
-			start_new_word = 0; 
-			total_words += 1; 
-		} 
-		i++; 
-		} 
-	return (total_words); 
-} */
 
 static	int	count_words(const char *s, char c)
 {
@@ -51,8 +19,8 @@ static	int	count_words(const char *s, char c)
 
 	i = 0;
 	total_words = 0;
-	// if (!s || !*s)
-	// 	return (0);
+	if (!s || !*s)
+		return (0);
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -75,7 +43,7 @@ static	char	*malloc_words(const char *s, char c)
 	len = 0;
 	while (s[len] && s[len] != c)
 		len++;
-	word = (char *)malloc((len + 1) * sizeof(char));
+	word = malloc((len + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	word[len] = '\0';
@@ -146,4 +114,5 @@ char	**ft_split(char const *s, char c)
 // 	}
 // 	for (int i = 0; res[i]; i++)
 // 		printf("%s\n", res[i]);
+//	free(res);
 // }

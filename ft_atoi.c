@@ -59,24 +59,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return ((int)(result * sign));
 }
-/*
-// #include <stdlib.h>
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	printf("%d\n", ft_atoi("-9223372036854775809"));
-// 	printf("%d\n",atoi("-9223372036854775809"));
-// } 
-#include <stdio.h>
-#include <stdlib.h>
-
-int	main(void)
-{
-	printf("ft_atoi: %d\n", ft_atoi("9223372036854775809"));
-	printf("atoi:    %d\n", atoi("9223372036854775809"));
-	printf("ft_atoi: %d\n", ft_atoi("-9223372036854775809"));
-	printf("atoi:    %d\n", atoi("-9223372036854775809"));
-	printf("ft_atoi: %d\n", ft_atoi("+-42abc"));
-	printf("atoi:    %d\n", atoi("+-42abc"));
-}*/
