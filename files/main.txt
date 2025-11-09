@@ -1,6 +1,0 @@
-imlpicit/explicit casting
-casting
-void pointers 
-makefile change the ordre if we move a command down to up whta happens
-header file ifndef why LIBFT => norminette check
-memset 1 int to string 1337 - a - to b
