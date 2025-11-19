@@ -6,56 +6,45 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 16:23:50 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/03 22:26:38 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/09 19:45:44 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-static int	check_overflow(unsigned long result, int sign, char next_digit)
+static int	check_sign(const char *nptr, int *sign)
 {
-	if (result * 10 > (unsigned long)LONG_MAX)
+	if (*nptr == '-' || *nptr == '+')
 	{
-		if (sign == 1)
-			return (-1);
-		else
-			return (0);
+		if (*nptr == '-')
+			*sign = -1;
+		return (1);
 	}
-	if (result == (unsigned long)LONG_MAX / 10
-		&& (next_digit - '0') > (LONG_MAX % 10))
-	{
-		if (sign == 1)
-			return (-1);
-		else
-			return (0);
-	}
-	return (1);
+	return (0);
 }
 
 int	ft_atoi(const char *nptr)
 {
-	unsigned long	result;
-	int				sign;
-	int				i;
-	int				check;
+	long	result;
+	long	rcheck;
+	int		sign;
 
-	i = 0;
 	sign = 1;
-	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-	{
-		if (nptr[i] == '-')
-			sign = -1;
-		i++;
-	}
+	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
+		nptr++;
+	nptr += check_sign(nptr, &sign);
 	result = 0;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		check = check_overflow(result, sign, nptr[i]);
-		if (check != 1)
-			return (check);
-		result = result * 10 + (nptr[i] - 48);
-		i++;
+		rcheck = result;
+		result = result * 10 + (*nptr - 48);
+		if (rcheck > result / 10)
+		{
+			if (sign == -1)
+				return (0);
+			return (-1);
+		}
+		nptr++;
 	}
 	return ((int)(result * sign));
 }

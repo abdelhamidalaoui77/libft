@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
+/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 20:55:16 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/09 07:57:43 by abdelhamid       ###   ########.fr       */
+/*   Updated: 2025/11/09 19:08:57 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static	char	*malloc_words(const char *s, char c)
 	len = 0;
 	while (s[len] && s[len] != c)
 		len++;
-	word = malloc((len + 1) * sizeof(char));
+	word = (char *)malloc((len + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	word[len] = '\0';
@@ -103,16 +103,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (res);
 }
-
-// int main()
-// {
-// 	char **res =ft_split("    hello   1337  !!", ' ');
-// 	if (!res)
-// 	{
-// 		puts("failed");
-// 		return 0;
-// 	}
-// 	for (int i = 0; res[i]; i++)
-// 		printf("%s\n", res[i]);
-//	free(res);
-// }

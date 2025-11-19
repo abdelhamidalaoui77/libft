@@ -6,7 +6,7 @@
 /*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:34:58 by alamrani          #+#    #+#             */
-/*   Updated: 2025/10/31 22:32:32 by alamrani         ###   ########.fr       */
+/*   Updated: 2025/11/18 21:40:54 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	length;
 	char			*res;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	length = ft_strlen(s);
 	res = malloc(length * sizeof(char) + 1);
@@ -33,21 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[i] = '\0';
 	return (res);
 }
-/*
-#include <stdio.h>
-#include "libft.h"
-
-char	to_upper_even(unsigned int i, char c)
-{
-	if (i % 2 == 0 && c >= 'a' && c <= 'z')
-		return (c - 32); // uppercase
-	return (c);
-}
-
-int main(void)
-{
-	char *s = "abcdef";
-	char *result = ft_strmapi(s, to_upper_even);
-	printf("%s\n", result); // Output: "AbCdEf"
-	free(result);
-} */

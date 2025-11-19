@@ -9,7 +9,7 @@
 /*   Updated: 2025/10/26 15:10:22 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <fcntl.h>
+
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
+/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:35:39 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/09 04:49:25 by abdelhamid       ###   ########.fr       */
+/*   Updated: 2025/11/08 16:12:37 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	srclen = ft_strlen(src);
 	if (size == 0)
-	{
 		return (srclen);
-	}
 	dstlen = ft_strlen(dst);
 	if (size <= dstlen)
 		return (srclen + size);
@@ -32,14 +30,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dstlen + i] = src[i];
 		i++;
 	}
+	srclen = ft_strlen(src);
 	dst[dstlen + i] = '\0';
 	return (srclen + dstlen);
 }
-// #include <stdio.h>
-// #include <bsd/string.h>
-// int main()
-// {
-// 	char dst[15] = "hel";
-// 	size_t i = ft_strlcat(dst,NULL,5);
-// 	printf("%zu\n",i);
-// }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
+/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 19:14:01 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/09 04:16:39 by abdelhamid       ###   ########.fr       */
+/*   Created: 2025/11/11 16:56:29 by alamrani          #+#    #+#             */
+/*   Updated: 2025/11/11 16:56:33 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-// #include <stdio.h>
-// int	main()
-// {
-// 	int a = 257;
-// 	ft_bzero((char *)&a+1,1);
-// 	printf("%d\n",a);
-// }

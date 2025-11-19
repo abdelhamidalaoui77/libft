@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdelhamid <abdelhamid@student.42.fr>      +#+  +:+       +#+        */
+/*   By: alamrani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 20:28:50 by alamrani          #+#    #+#             */
-/*   Updated: 2025/11/09 04:52:33 by abdelhamid       ###   ########.fr       */
+/*   Updated: 2025/11/09 19:32:07 by alamrani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	i = 0;
-	if (len == 0)
-		return (NULL);
-	if (!little)
+	if (*little == '\0')
 		return ((char *)big);
+	i = 0;
 	while (big[i] && i < len)
 	{
 		j = 0;
@@ -30,16 +28,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			j++;
 		}
 		if (little[j] == '\0')
-			return ((char *)&big[i]);
+			return ((char *)big + i);
 		i++;
 	}
 	return (NULL);
 }
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-// 	char dst[15] = "hel";
-// 	char *s = ft_strnstr(NULL,"NULL",0);
-// 	//printf("%s\n",s);
-// }
